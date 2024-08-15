@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsjvmt7tltwfh"]
+
+[ext_resource type="Texture2D" uid="uid://goiq6kil5fxk" path="res://icon.svg" id="1_uybpc"]
+[ext_resource type="Script" path="res://figurinha.gd" id="2_xxd1l"]
+
+[node name="Principal" type="Node2D"]
+
+[node name="Figurinha" type="Sprite2D" parent="."]
+position = Vector2(-202, -82)
+texture = ExtResource("1_uybpc")
+script = ExtResource("2_xxd1l")
