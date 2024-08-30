@@ -1,14 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwfei0d0ncyla"]
 
 [ext_resource type="Script" path="res://principal.gd" id="1_4w1y8"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="2_jn5xh"]
-[ext_resource type="Texture2D" uid="uid://c36ot3m3ewmdl" path="res://icon.svg" id="2_xlnjf"]
+[ext_resource type="PackedScene" uid="uid://ittkg52ngsij" path="res://Personagem.tscn" id="2_t8d50"]
+[ext_resource type="PackedScene" uid="uid://ctxvcpf8hd8wh" path="res://Plataforma.tscn" id="3_3cm8q"]
 
 [node name="Principal" type="Node2D"]
 script = ExtResource("1_4w1y8")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("2_jn5xh")
+[node name="Personagem" parent="." instance=ExtResource("2_t8d50")]
+position = Vector2(127, -41)
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("2_xlnjf")
+[node name="Plataforma" parent="." instance=ExtResource("3_3cm8q")]
+position = Vector2(13, 417)
+
+[node name="Plataforma" parent="Plataforma" instance=ExtResource("3_3cm8q")]
+position = Vector2(127, 0)
